@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0c29;
+    background: linear-gradient(135deg, #0f0c29, #1c1a40, #090015);
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 50px;
+    color: white;
+}
+
+/* ✨ Animated Glowing Stars */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveStars 80s linear infinite;
+    opacity: 0.15;
+}
+
+@keyframes moveStars {
+    from { transform: translate(0,0); }
+    to { transform: translate(-100px, -100px); }
+}
+
+/* Header */
+#header h1 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    color: #00f7ff;
+    text-shadow: 0 0 15px #00f7ff;
+}
+
+/* Main Container */
+#container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 40px rgba(0,255,255,0.2);
+}
+
+/* 🚀 SUPER GLOW BUTTON */
+.add-button {
+    background: linear-gradient(45deg, #00f7ff, #0072ff);
+    border: none;
+    padding: 18px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 60px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 20px #00f7ff, 0 0 40px #0072ff;
+    margin-bottom: 35px;
+}
+
+.add-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px #00f7ff, 0 0 80px #0072ff;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.6);
+    font-size: 18px;
+}
+
+/* Column Headers */
+th {
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    padding: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* Table Data */
+td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Row Hover */
+tr:hover {
+    background: rgba(0,255,255,0.1);
+    transition: 0.3s;
+}
+
+/* Update Button */
+a[href*="update"] {
+    background: #00ff88;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 15px #00ff88;
+    transition: 0.3s;
+}
+
+a[href*="update"]:hover {
+    box-shadow: 0 0 30px #00ff88;
+}
+
+/* Delete Button */
+a[href*="delete"] {
+    background: #ff0055;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 15px #ff0055;
+    transition: 0.3s;
+}
+
+a[href*="delete"]:hover {
+    box-shadow: 0 0 30px #ff0055;
+}
